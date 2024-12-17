@@ -7,8 +7,11 @@
                 <div class="card-body">
                     <div class="d-flex align-items-center">
                         <div>
+                            @php
+                                $total_organization = \App\Models\Organization::count();
+                            @endphp
                             <p class="mb-0 text-secondary">Total Organizations</p>
-                            <h4 class="my-1">154</h4>
+                            <h4 class="my-1">{{$total_organization}}</h4>
                         </div>
                         <div class="widgets-icons bg-light-success text-success ms-auto"><i class='bx bxs-wallet'></i>
                         </div>
