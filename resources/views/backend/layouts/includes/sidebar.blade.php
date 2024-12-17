@@ -12,7 +12,7 @@
     <!--navigation-->
     <ul class="metismenu" id="menu">
         <li>
-            <a href="javascript:;" class="has-arrow">
+            <a href="javascript:viod(0);" class="has-arrow">
                 <div class="parent-icon"><i class='bx bx-home-alt'></i>
                 </div>
                 <div class="menu-title">Dashboard</div>
@@ -25,7 +25,7 @@
             </ul>
         </li>
         <li>
-            <a href="javascript:;" class="has-arrow">
+            <a href="javascript:viod(0);" class="has-arrow">
                 <div class="parent-icon"><i class="bx bx-category"></i>
                 </div>
                 <div class="menu-title">Application</div>
@@ -56,7 +56,7 @@
             </a>
         </li>
         <li>
-            <a href="javascript:;" class="has-arrow">
+            <a href="javascript:viod(0);" class="has-arrow">
                 <div class="parent-icon"><i class='bx bx-cart'></i>
                 </div>
                 <div class="menu-title">eCommerce</div>
@@ -75,7 +75,7 @@
             </ul>
         </li>
         <li>
-            <a class="has-arrow" href="javascript:;">
+            <a class="has-arrow" href="javascript:viod(0);">
                 <div class="parent-icon"><i class='bx bx-bookmark-heart'></i>
                 </div>
                 <div class="menu-title">Components</div>
@@ -121,7 +121,7 @@
             </ul>
         </li>
         <li>
-            <a class="has-arrow" href="javascript:;">
+            <a class="has-arrow" href="javascript:viod(0);">
                 <div class="parent-icon"><i class="bx bx-repeat"></i>
                 </div>
                 <div class="menu-title">Content</div>
@@ -137,7 +137,7 @@
             </ul>
         </li>
         <li>
-            <a class="has-arrow" href="javascript:;">
+            <a class="has-arrow" href="javascript:viod(0);">
                 <div class="parent-icon"> <i class="bx bx-donate-blood"></i>
                 </div>
                 <div class="menu-title">Icons</div>
@@ -160,7 +160,7 @@
         </li>
         <li class="menu-label">Forms & Tables</li>
         <li>
-            <a class="has-arrow" href="javascript:;">
+            <a class="has-arrow" href="javascript:viod(0);">
                 <div class="parent-icon"><i class='bx bx-message-square-edit'></i>
                 </div>
                 <div class="menu-title">Forms</div>
@@ -192,7 +192,7 @@
             </ul>
         </li>
         <li>
-            <a class="has-arrow" href="javascript:;">
+            <a class="has-arrow" href="javascript:viod(0);">
                 <div class="parent-icon"><i class="bx bx-grid-alt"></i>
                 </div>
                 <div class="menu-title">Tables</div>
@@ -206,13 +206,13 @@
         </li>
         <li class="menu-label">Pages</li>
         <li>
-            <a class="has-arrow" href="javascript:;">
+            <a class="has-arrow" href="javascript:viod(0);">
                 <div class="parent-icon"><i class="bx bx-lock"></i>
                 </div>
                 <div class="menu-title">Authentication</div>
             </a>
             <ul>
-                <li><a class="has-arrow" href="javascript:;"><i class='bx bx-radio-circle'></i>Basic</a>
+                <li><a class="has-arrow" href="javascript:viod(0);"><i class='bx bx-radio-circle'></i>Basic</a>
                     <ul>
                         <li><a href="auth-basic-signin.html" target="_blank"><i
                                     class='bx bx-radio-circle'></i>Sign In</a></li>
@@ -224,7 +224,7 @@
                                     class='bx bx-radio-circle'></i>Reset Password</a></li>
                     </ul>
                 </li>
-                <li><a class="has-arrow" href="javascript:;"><i class='bx bx-radio-circle'></i>Cover</a>
+                <li><a class="has-arrow" href="javascript:viod(0);"><i class='bx bx-radio-circle'></i>Cover</a>
                     <ul>
                         <li><a href="auth-cover-signin.html" target="_blank"><i
                                     class='bx bx-radio-circle'></i>Sign In</a></li>
@@ -236,7 +236,7 @@
                                     class='bx bx-radio-circle'></i>Reset Password</a></li>
                     </ul>
                 </li>
-                <li><a class="has-arrow" href="javascript:;"><i class='bx bx-radio-circle'></i>With Header
+                <li><a class="has-arrow" href="javascript:viod(0);"><i class='bx bx-radio-circle'></i>With Header
                         Footer</a>
                     <ul>
                         <li><a href="auth-header-footer-signin.html" target="_blank"><i
@@ -266,7 +266,7 @@
             </a>
         </li>
         <li>
-            <a class="has-arrow" href="javascript:;">
+            <a class="has-arrow" href="javascript:viod(0);">
                 <div class="parent-icon"><i class="bx bx-error"></i>
                 </div>
                 <div class="menu-title">Errors</div>
@@ -302,7 +302,7 @@
         </li>
         <li class="menu-label">Charts & Maps</li>
         <li>
-            <a class="has-arrow" href="javascript:;">
+            <a class="has-arrow" href="javascript:viod(0);">
                 <div class="parent-icon"><i class="bx bx-line-chart"></i>
                 </div>
                 <div class="menu-title">Charts</div>
@@ -317,7 +317,7 @@
             </ul>
         </li>
         <li>
-            <a class="has-arrow" href="javascript:;">
+            <a class="has-arrow" href="javascript:viod(0);">
                 <div class="parent-icon"><i class="bx bx-map-alt"></i>
                 </div>
                 <div class="menu-title">Maps</div>
@@ -331,18 +331,18 @@
         </li>
         <li class="menu-label">Others</li>
         <li>
-            <a class="has-arrow" href="javascript:;">
+            <a class="has-arrow" href="javascript:viod(0);">
                 <div class="parent-icon"><i class="bx bx-menu"></i>
                 </div>
                 <div class="menu-title">Menu Levels</div>
             </a>
             <ul>
-                <li> <a class="has-arrow" href="javascript:;"><i class='bx bx-radio-circle'></i>Level One</a>
+                <li> <a class="has-arrow" href="javascript:viod(0);"><i class='bx bx-radio-circle'></i>Level One</a>
                     <ul>
-                        <li> <a class="has-arrow" href="javascript:;"><i class='bx bx-radio-circle'></i>Level
+                        <li> <a class="has-arrow" href="javascript:viod(0);"><i class='bx bx-radio-circle'></i>Level
                                 Two</a>
                             <ul>
-                                <li> <a href="javascript:;"><i class='bx bx-radio-circle'></i>Level Three</a>
+                                <li> <a href="javascript:viod(0);"><i class='bx bx-radio-circle'></i>Level Three</a>
                                 </li>
                             </ul>
                         </li>
@@ -351,7 +351,7 @@
             </ul>
         </li>
         <li>
-            <a href="javascript:;">
+            <a href="javascript:viod(0);">
                 <div class="parent-icon"><i class="bx bx-folder"></i>
                 </div>
                 <div class="menu-title">Documentation</div>
