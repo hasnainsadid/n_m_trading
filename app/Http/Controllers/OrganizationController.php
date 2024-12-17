@@ -13,7 +13,7 @@ class OrganizationController extends Controller
      */
     public function index()
     {
-        $organizations = Organization::all();
+        $organizations = Organization::orderBy('name', 'asc')->get();
         return view('backend.pages.organization.index', compact('organizations'));
     }
 
