@@ -9,8 +9,8 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center">
                             <div>
-                                <p class="mb-0 text-secondary">Revenue</p>
-                                <h4 class="my-1">$4805</h4>
+                                <p class="mb-0 text-secondary">Total Organizations</p>
+                                <h4 class="my-1">154</h4>
                             </div>
                             <div class="widgets-icons bg-light-success text-success ms-auto"><i
                                     class='bx bxs-wallet'></i>
@@ -26,7 +26,7 @@
                         <div class="d-flex align-items-center">
                             <div>
                                 <p class="mb-0 text-secondary">Total Customers</p>
-                                <h4 class="my-1">8.4K</h4>
+                                <h4 class="my-1">0000</h4>
                             </div>
                             <div class="widgets-icons bg-light-warning text-warning ms-auto"><i
                                     class='bx bxs-group'></i>
@@ -42,7 +42,7 @@
                         <div class="d-flex align-items-center">
                             <div>
                                 <p class="mb-0 text-secondary">Store Visitors</p>
-                                <h4 class="my-1">59K</h4>
+                                <h4 class="my-1">1543</h4>
                             </div>
                             <div class="widgets-icons bg-light-danger text-danger ms-auto"><i
                                     class='bx bxs-binoculars'></i>
