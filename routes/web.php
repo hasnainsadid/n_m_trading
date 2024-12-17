@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OrganizationController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,4 +15,6 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('backend.pages.dashboard.index');
     })->name('dashboard');
+
+    Route::resource('organizations', OrganizationController::class);
 });

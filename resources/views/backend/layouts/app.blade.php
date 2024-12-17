@@ -23,6 +23,8 @@
         rel="stylesheet">
     <link href="{{ asset('backend') }}/assets/css/app.css" rel="stylesheet">
     <link href="{{ asset('backend') }}/assets/css/icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
+
     <!-- Theme Style CSS -->
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/dark-theme.css" />
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/semi-dark.css" />
@@ -32,26 +34,18 @@
 </head>
 
 <body>
-    <!--wrapper-->
     <div class="wrapper">
-        <!--sidebar wrapper -->
         @include('backend.layouts.includes.sidebar')
-        <!--end sidebar wrapper -->
-        <!--start header -->
         @include('backend.layouts.includes.header')
-        <!--end header -->
-        <!--start page wrapper -->
-        @yield('content')
-        <!--end page wrapper -->
-        <!--start overlay-->
+        <div class="page-wrapper">
+            <div class="page-content">
+                @yield('content')
+            </div>
+        </div>
         <div class="overlay toggle-icon"></div>
-        <!--end overlay-->
-        <!--Start Back To Top Button-->
         <a href="javaScript:viod(0);" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
-        <!--End Back To Top Button-->
         @include('backend.layouts.includes.footer')
     </div>
-    <!--end wrapper-->
 
 
     <!-- search modal -->
@@ -70,68 +64,7 @@
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="search-list">
-                        <p class="mb-1">Html Templates</p>
-                        <div class="list-group">
-                            <a href="javascript:;"
-                                class="list-group-item list-group-item-action active align-items-center d-flex gap-2 py-1"><i
-                                    class='bx bxl-angular fs-4'></i>Best Html Templates</a>
-                            <a href="javascript:;"
-                                class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
-                                    class='bx bxl-vuejs fs-4'></i>Html5 Templates</a>
-                            <a href="javascript:;"
-                                class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
-                                    class='bx bxl-magento fs-4'></i>Responsive Html5 Templates</a>
-                            <a href="javascript:;"
-                                class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
-                                    class='bx bxl-shopify fs-4'></i>eCommerce Html Templates</a>
-                        </div>
-                        <p class="mb-1 mt-3">Web Designe Company</p>
-                        <div class="list-group">
-                            <a href="javascript:;"
-                                class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
-                                    class='bx bxl-windows fs-4'></i>Best Html Templates</a>
-                            <a href="javascript:;"
-                                class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
-                                    class='bx bxl-dropbox fs-4'></i>Html5 Templates</a>
-                            <a href="javascript:;"
-                                class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
-                                    class='bx bxl-opera fs-4'></i>Responsive Html5 Templates</a>
-                            <a href="javascript:;"
-                                class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
-                                    class='bx bxl-wordpress fs-4'></i>eCommerce Html Templates</a>
-                        </div>
-                        <p class="mb-1 mt-3">Software Development</p>
-                        <div class="list-group">
-                            <a href="javascript:;"
-                                class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
-                                    class='bx bxl-mailchimp fs-4'></i>Best Html Templates</a>
-                            <a href="javascript:;"
-                                class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
-                                    class='bx bxl-zoom fs-4'></i>Html5 Templates</a>
-                            <a href="javascript:;"
-                                class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
-                                    class='bx bxl-sass fs-4'></i>Responsive Html5 Templates</a>
-                            <a href="javascript:;"
-                                class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
-                                    class='bx bxl-vk fs-4'></i>eCommerce Html Templates</a>
-                        </div>
-                        <p class="mb-1 mt-3">Online Shoping Portals</p>
-                        <div class="list-group">
-                            <a href="javascript:;"
-                                class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
-                                    class='bx bxl-slack fs-4'></i>Best Html Templates</a>
-                            <a href="javascript:;"
-                                class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
-                                    class='bx bxl-skype fs-4'></i>Html5 Templates</a>
-                            <a href="javascript:;"
-                                class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
-                                    class='bx bxl-twitter fs-4'></i>Responsive Html5 Templates</a>
-                            <a href="javascript:;"
-                                class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
-                                    class='bx bxl-vimeo fs-4'></i>eCommerce Html Templates</a>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>

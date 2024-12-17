@@ -21,7 +21,7 @@
        
         <li class="menu-label">Workflow</li>
         <li>
-            <a href="widgets.html">
+            <a href="{{route('organizations.index')}}">
                 <div class="parent-icon"><i class='bx bx-cookie'></i>
                 </div>
                 <div class="menu-title">Organizations</div>
