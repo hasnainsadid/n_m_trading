@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('organizations', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->enum('status', ['active', 'inactive'])->nullable();
+            $table->string('address')->nullable();
+            $table->string('bin_no')->nullable();
             $table->timestamps();
         });
     }

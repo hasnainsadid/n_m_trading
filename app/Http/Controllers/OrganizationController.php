@@ -32,7 +32,8 @@ class OrganizationController extends Controller
     {
         $validate = Validator::make($request->all(), [
             'name' =>'required|string|max:255',
-            'status' =>'required|string|max:255',
+            'address' =>'required|string',
+            'bin_no' =>'required|string',
         ]);
 
         if ($validate->fails()) {
@@ -41,7 +42,8 @@ class OrganizationController extends Controller
 
         $organization = new Organization();
         $organization->name = $request->name;
-        $organization->status = $request->status;
+        $organization->address = $request->address;
+        $organization->bin_no = $request->bin_no;
         $organization->save();
         notify()->success('Organization created successfully!');
         return redirect()->route('organizations.index');
@@ -72,7 +74,9 @@ class OrganizationController extends Controller
     {
         $organization = Organization::find($id);
         $organization->name = $request->name;
-        $organization->status = $request->status;
+        $organization->address = $request->address;
+        $organization->address = $request->address;
+        $organization->bin_no = $request->bin_no;
         $organization->save();
         notify()->success('Organization updated successfully!');
         return redirect()->route('organizations.index');
