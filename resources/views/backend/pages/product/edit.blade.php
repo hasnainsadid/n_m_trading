@@ -1,11 +1,11 @@
 @extends('backend.layouts.app')
-@section('title', __('Add Product'))
+@section('title', __('Edit Product'))
 @section('content')
     <div class="row">
         <div class="col-xl-12 mx-auto">
             <div
                 class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h6 class="mb-0 text-uppercase">Add New Product</h6>
+                <h6 class="mb-0 text-uppercase">Update Product</h6>
                 <h6><a class="btn btn-primary" href="{{ route('products.index') }}">All Products</a></h6>
             </div>
 
