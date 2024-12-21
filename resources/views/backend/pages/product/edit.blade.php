@@ -13,19 +13,20 @@
                 <div class="card-body">
                     <form action="{{ route('products.update', $product->id) }}" method="post">
                         @csrf
+                        @method('PUT')
                         <div class="form-group">
                             <label for="product_name" class="form-label">Product Name</label>
                             <input class="form-control mb-3" type="text" value="{{$product->product_name}}" name="product_name" id="product_name" required>
                         </div>
                         <div class="form-group">
                             <label for="buyer_name" class="form-label">Buyer Name</label>
-                            <input type="text" class="form-control mb-3" value={{$product->buyer_name}} name="buyer_name"
+                            <input type="text" class="form-control mb-3" value="{{$product->buyer_name}}" name="buyer_name"
                                 id="buyer_name" required>
                         </div>
 
                         <div class="form-group">
                             <label for="buyer_address" class="form-label">Buyer Address</label>
-                            <input type="text" class="form-control mb-3" placeholder="Buyer Address" name="buyer_address"
+                            <input type="text" class="form-control mb-3" value="{{$product->buyer_address}}" name="buyer_address"
                                 id="buyer_address" required>
                         </div>
                         
@@ -37,7 +38,7 @@
                             <select name="organization_id" id="organization_id" class="form-control mb-3" required>
                                 <option value="">Select Organization</option>
                                 @foreach ($organizations as $organization)
-                                    <option value="{{ $organization->id }}">{{ $organization->name }}</option>
+                                    <option value="{{ $organization->id }}" @selected($organization->id == $product->organization_id)>{{ $organization->name }}</option>
                                 @endforeach
                             </select>
                         </div>
