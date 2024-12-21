@@ -27,6 +27,13 @@
                 <div class="menu-title">Organizations</div>
             </a>
         </li>
+        <li>
+            <a href="{{route('products.index')}}">
+                <div class="parent-icon"><i class='bx bx-cookie'></i>
+                </div>
+                <div class="menu-title">Products</div>
+            </a>
+        </li>
     </ul>
     <!--end navigation-->
 </div>

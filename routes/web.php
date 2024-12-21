@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\OrganizationController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OthersController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\OrganizationController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,4 +19,14 @@ Route::middleware([
     })->name('dashboard');
 
     Route::resource('organizations', OrganizationController::class);
+    Route::resource('products', ProductController::class);
+});
+
+
+
+Route::controller(OthersController::class)->group(function () {
+    Route::get('/migrate', 'migrate')->name('migration');
+    Route::get('/clear', 'clear')->name('clear');
+    Route::get('/composer', 'composer')->name('composer');
+    Route::get('/iseed', 'iseed')->name('iseed');
 });
