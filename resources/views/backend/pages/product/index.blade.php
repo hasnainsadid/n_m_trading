@@ -17,6 +17,7 @@
                                 <th scope="col">Sl No.</th>
                                 <th scope="col">Product Name</th>
                                 <th scope="col">Buyer Name & Address</th>
+                                <th scope="col">Buyer BIN No.</th>
                                 <th scope="col">Organization Name</th>
                                 <th scope="col">Action</th>
                             </tr>
@@ -27,6 +28,7 @@
                                     <th scope="row">{{ ++$key }}</th>
                                     <td>{{ $product->product_name }}</td>
                                     <td>{{ ucfirst($product->buyer_name) }} <br> {{ucfirst($product->buyer_address)}}</td>
+                                    <td>{{ $product->buyer_bin_no}}</td>
                                     <td>{{ ucfirst($product->organization->name) }}</td>
                                     <td>
                                         <a href="{{ route('products.edit', $product->id) }}">

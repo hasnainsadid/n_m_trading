@@ -22,14 +22,14 @@
         <li class="menu-label">Workflow</li>
         <li>
             <a href="{{route('organizations.index')}}">
-                <div class="parent-icon"><i class='bx bx-cookie'></i>
+                <div class="parent-icon"><i class='bx bx-list-ol'></i>
                 </div>
                 <div class="menu-title">Organizations</div>
             </a>
         </li>
         <li>
             <a href="{{route('products.index')}}">
-                <div class="parent-icon"><i class='bx bx-cookie'></i>
+                <div class="parent-icon"><i class='bx bx-category'></i>
                 </div>
                 <div class="menu-title">Products</div>
             </a>

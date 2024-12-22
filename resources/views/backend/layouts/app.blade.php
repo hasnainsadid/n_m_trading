@@ -29,6 +29,9 @@
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/semi-dark.css" />
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/header-colors.css" />
     <link href="{{ asset('css/iziToast.css') }}" rel="stylesheet">
+    <!-- Boxicons CSS -->
+<link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
     <title>N. M. Trading | @yield('title')</title>
 </head>
 

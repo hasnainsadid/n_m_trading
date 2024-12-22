@@ -29,6 +29,12 @@
                             <input type="text" class="form-control mb-3" value="{{$product->buyer_address}}" name="buyer_address"
                                 id="buyer_address" required>
                         </div>
+
+                        <div class="form-group">
+                            <label for="buyer_bin_no" class="form-label">Buyer Bin No.</label>
+                            <input type="text" class="form-control mb-3" value="{{$product->buyer_bin_no}}" name="buyer_bin_no"
+                                id="buyer_bin_no" required>
+                        </div>
                         
                         @php
                             $organizations = App\Models\Organization::all();

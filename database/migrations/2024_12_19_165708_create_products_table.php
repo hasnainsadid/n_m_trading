@@ -14,6 +14,7 @@ return new class extends Migration
             $table->string('product_name')->nullable();
             $table->text('buyer_name')->nullable();
             $table->text('buyer_address')->nullable();
+            $table->text('buyer_bin_no')->nullable();
             $table->timestamps();
         });
     }
