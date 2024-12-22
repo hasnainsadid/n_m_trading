@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OthersController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\OrganizationController;
 
 Route::get('/', function () {
@@ -20,6 +21,7 @@ Route::middleware([
 
     Route::resource('organizations', OrganizationController::class);
     Route::resource('products', ProductController::class);
+    Route::resource('purchases', PurchaseController::class);
 });
 
 

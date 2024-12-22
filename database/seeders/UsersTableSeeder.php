@@ -25,7 +25,7 @@ class UsersTableSeeder extends Seeder
                 'name' => 'Hasnain Sadid',
                 'email' => 'hasnainsadid@gmail.com',
                 'email_verified_at' => NULL,
-                'password' => '$2y$12$GgJIx8bf3rB3kaJTPK/Zs..CylLL4lOnfSH1UJ4QIUs8pfxHKIcM6', //password is password.
+                'password' => '$2y$12$GgJIx8bf3rB3kaJTPK/Zs..CylLL4lOnfSH1UJ4QIUs8pfxHKIcM6',
                 'two_factor_secret' => NULL,
                 'two_factor_recovery_codes' => NULL,
                 'two_factor_confirmed_at' => NULL,
