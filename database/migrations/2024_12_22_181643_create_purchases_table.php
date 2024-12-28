@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('purchases', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('product_id');
+            $table->string('date');
+            $table->string('pm_bill_of_entry')->nullable();
+            $table->string('pm_bill_of_entry_date')->nullable();
+            $table->string('pm_unit')->nullable();
+            $table->string('pm_price_without_vat')->nullable();
+            $table->string('pm_supplementary_duty')->nullable();
+            $table->string('pm_vat')->nullable();
             $table->timestamps();
         });
     }

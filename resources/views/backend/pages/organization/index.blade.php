@@ -11,7 +11,7 @@
             <hr />
             <div class="card">
                 <div class="card-body">
-                    <table class="table mb-0 table-striped text-center">
+                    <table id="example2" class="table mb-0 table-striped text-center">
                         <thead>
                             <tr>
                                 <th scope="col">Sl No.</th>
@@ -52,3 +52,16 @@
         </div>
     </div>
 @endsection
+@push('scripts')
+<script>
+    $(document).ready(function() {
+        var table = $('#example2').DataTable( {
+            lengthChange: false,
+            buttons: [ 'copy', 'excel', 'pdf', 'print']
+        } );
+     
+        table.buttons().container()
+            .appendTo( '#example2_wrapper .col-md-6:eq(0)' );
+    } );
+</script>
+@endpush

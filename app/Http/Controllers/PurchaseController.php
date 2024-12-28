@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
+use App\Models\Purchase;
 use Illuminate\Http\Request;
 
 class PurchaseController extends Controller
@@ -19,7 +21,7 @@ class PurchaseController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.pages.purchase.create');
     }
 
     /**
@@ -27,7 +29,30 @@ class PurchaseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $purchase = new Purchase();
+        $purchase->date = $request->date;
+        $purchase->product_id = $request->product_id;
+        // $purchase->organization_id = $request->organization_id;
+        $purchase->pm_bill_of_entry = $request->pm_bill_of_entry;
+        $purchase->pm_bill_of_entry_date = $request->pm_bill_of_entry_date;
+        $purchase->pm_unit = $request->pm_unit;
+        $purchase->pm_price_without_vat = $request->pm_price_without_vat;
+        $purchase->pm_supplementary_duty = $request->pm_supplementary_duty;
+        $purchase->pm_vat = $request->pm_vat;
+        // $purchase->tm_unit = $request->tm_unit;
+        // $purchase->tm_price = $request->tm_price;
+        // $purchase->cbi_unit = $request->cbi_unit;
+        // $purchase->cbi_price = $request->cbi_price;
+
+        // dd($purchase);
+        $purchase->save();
+
+        $product = Product::find($request->product_id);
+        $product->stock_price = $product->stock_price + $request->pm_price_without_vat;
+        $product->stock_unit = $request->pm_unit + $product->stock_unit;
+        $product->save();
+        notify()->success('Purchase created successfully!');
+        return redirect()->route('purchases.create');
     }
 
     /**

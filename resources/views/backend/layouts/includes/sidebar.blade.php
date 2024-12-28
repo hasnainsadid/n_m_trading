@@ -22,7 +22,7 @@
         <li class="menu-label">Workflow</li>
         <li>
             <a href="{{route('organizations.index')}}">
-                <div class="parent-icon"><i class='bx bx-list-ol'></i>
+                <div class="parent-icon"><i class='bx bx-wallet'></i>
                 </div>
                 <div class="menu-title">Organizations</div>
             </a>
@@ -35,7 +35,7 @@
             </a>
         </li>
         <li>
-            <a href="{{route('purchases.index')}}">
+            <a href="{{route('purchases.create')}}">
                 <div class="parent-icon"><i class='bx bx-arrow-to-right
 '></i>
                 </div>

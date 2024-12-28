@@ -25,10 +25,13 @@
                 <div class="card-body">
                     <div class="d-flex align-items-center">
                         <div>
-                            <p class="mb-0 text-secondary">Total Customers</p>
-                            <h4 class="my-1">0000</h4>
+                            @php
+                                $products = \App\Models\Product::count();
+                            @endphp
+                            <p class="mb-0 text-secondary">Total Products</p>
+                            <h4 class="my-1">{{$products}}</h4>
                         </div>
-                        <div class="widgets-icons bg-light-warning text-warning ms-auto"><i class='bx bxs-group'></i>
+                        <div class="widgets-icons bg-light-warning text-warning ms-auto"><i class='bx bxs-category'></i>
                         </div>
                     </div>
 

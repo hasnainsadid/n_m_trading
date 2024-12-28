@@ -23,14 +23,17 @@
         rel="stylesheet">
     <link href="{{ asset('backend') }}/assets/css/app.css" rel="stylesheet">
     <link href="{{ asset('backend') }}/assets/css/icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Theme Style CSS -->
-    <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/dark-theme.css" />
+    {{-- <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/dark-theme.css" />
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/semi-dark.css" />
-    <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/header-colors.css" />
+    <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/header-colors.css" /> --}}
     <link href="{{ asset('css/iziToast.css') }}" rel="stylesheet">
     <!-- Boxicons CSS -->
-<link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    @stack('styles')
 
     <title>N. M. Trading | @yield('title')</title>
 </head>
@@ -56,8 +59,8 @@
             <div class="modal-content">
                 <div class="modal-header gap-2">
                     <div class="position-relative popup-search w-100">
-                        <input class="form-control form-control-lg ps-5 border border-3 border-primary"
-                            type="search" placeholder="Search">
+                        <input class="form-control form-control-lg ps-5 border border-3 border-primary" type="search"
+                            placeholder="Search">
                         <span
                             class="position-absolute top-50 search-show ms-3 translate-middle-y start-0 top-50 fs-4"><i
                                 class='bx bx-search'></i></span>
@@ -66,7 +69,7 @@
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    
+
                 </div>
             </div>
         </div>
@@ -89,6 +92,7 @@
     @include('vendor.lara-izitoast.toast')
     <!--app JS-->
     <script src="{{ asset('backend') }}/assets/js/app.js"></script>
+    @stack('scripts')
 </body>
 
 </html>
