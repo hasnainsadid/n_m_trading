@@ -52,11 +52,11 @@
                     @forelse ($purchase as $key => $item)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ Carbon\Carbon::parse(@$item->date)->format('d-m-Y') }}</td>
+                        <td>{{ Carbon\Carbon::parse(@$item->date)->format('j M, Y') }}</td>
                         <td>{{ $key == 0 ? 0 : @$item->obi_unit }}</td>
                         <td>{{ $key == 0 ? 0 : @$item->obi_price }}</td>
                         <td>{{ @$item->pm_bill_of_entry }}</td>
-                        <td>{{ @$item->pm_bill_of_entry_date }}</td>
+                        <td>{{ Carbon\Carbon::parse(@$item->pm_bill_of_entry_date)->format('j M, Y') }}</td>
                         <td>{{ @$product->buyer_name }}</td>
                         <td>{{ @$product->buyer_address }}</td>
                         <td>{{ @$product->buyer_bin_no }}</td>
