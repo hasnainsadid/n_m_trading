@@ -17,6 +17,18 @@
                             <label for="product_name" class="form-label">Product Name</label>
                             <input class="form-control mb-3" type="text" placeholder="Product Name" name="product_name" id="product_name" required>
                         </div>
+                        @php
+                            $organizations = App\Models\Organization::all();
+                        @endphp
+                        <div class="form-group">
+                            <label for="organization_id" class="form-label">Organization Name</label>
+                            <select name="organization_id" id="organization_id" class="form-control mb-3" required>
+                                <option value="">Select Organization</option>
+                                @foreach ($organizations as $organization)
+                                    <option value="{{ $organization->id }}">{{ $organization->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
                         <div class="form-group">
                             <label for="buyer_name" class="form-label">Buyer Name</label>
                             <input type="text" class="form-control mb-3" placeholder="Buyer Name" name="buyer_name"
@@ -35,18 +47,7 @@
                                 id="buyer_bin_no" required>
                         </div>
                         
-                        @php
-                            $organizations = App\Models\Organization::all();
-                        @endphp
-                        <div class="form-group">
-                            <label for="organization_id" class="form-label">Organization Name</label>
-                            <select name="organization_id" id="organization_id" class="form-control mb-3" required>
-                                <option value="">Select Organization</option>
-                                @foreach ($organizations as $organization)
-                                    <option value="{{ $organization->id }}">{{ $organization->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
+                        
 
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary">Submit</button>
@@ -57,3 +58,8 @@
         </div>
     </div>
 @endsection
+@push('scripts')
+    <script>
+        $('#organization_id').select2();
+    </script>
+@endpush

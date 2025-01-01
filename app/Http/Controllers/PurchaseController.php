@@ -29,22 +29,22 @@ class PurchaseController extends Controller
      */
     public function store(Request $request)
     {
+        $lastPurchase = Purchase::where('product_id', $request->product_id)->latest('id')->first();
+
         $purchase = new Purchase();
         $purchase->date = $request->date;
+        $purchase->obi_unit = $lastPurchase ? $lastPurchase->cbi_unit : 0;
+        $purchase->obi_price = $lastPurchase ? $lastPurchase->cbi_price : 0;
         $purchase->product_id = $request->product_id;
-        // $purchase->organization_id = $request->organization_id;
         $purchase->pm_bill_of_entry = $request->pm_bill_of_entry;
         $purchase->pm_bill_of_entry_date = $request->pm_bill_of_entry_date;
         $purchase->pm_unit = $request->pm_unit;
         $purchase->pm_price_without_vat = $request->pm_price_without_vat;
         $purchase->pm_supplementary_duty = $request->pm_supplementary_duty;
-        $purchase->pm_vat = $request->pm_vat;
-        // $purchase->tm_unit = $request->tm_unit;
-        // $purchase->tm_price = $request->tm_price;
-        // $purchase->cbi_unit = $request->cbi_unit;
-        // $purchase->cbi_price = $request->cbi_price;
+        $purchase->pm_vat = $request->pm_price_without_vat * $request->pm_vat / 100;
+        $purchase->cbi_unit = @$purchase->obi_unit + $request->pm_unit;
+        $purchase->cbi_price = @$purchase->obi_price + $request->pm_price_without_vat;
 
-        // dd($purchase);
         $purchase->save();
 
         $product = Product::find($request->product_id);

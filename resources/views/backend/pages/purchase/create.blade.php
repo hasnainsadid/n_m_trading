@@ -58,7 +58,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="pm_supplementary_duty" class="form-label">Supplementary duty (If applicable)</label>
-                                <input type="text" class="form-control mb-3" placeholder="Supplementary duty"
+                                <input type="number" class="form-control mb-3" placeholder="Supplementary duty"
                                     name="pm_supplementary_duty" id="pm_supplementary_duty">
                             </div>
                             <div class="form-group">
@@ -72,6 +72,12 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label for="note" class="form-label">Note (If applicable)</label>
+                            <input type="text" class="form-control mb-3" placeholder="Enter Note"
+                                name="note" id="note">
+                        </div>
+
 
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary">Submit</button>
@@ -99,5 +105,8 @@
                     }, false)
                 })
         })()
+    </script>
+    <script>
+        $('#product_id').select2();
     </script>
 @endpush

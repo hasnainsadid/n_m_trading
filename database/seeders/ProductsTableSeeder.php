@@ -27,8 +27,10 @@ class ProductsTableSeeder extends Seeder
                 'buyer_name' => 'Lg',
                 'buyer_address' => 'South Korea',
                 'buyer_bin_no' => '00219945-20192',
+                'stock_unit' => 193,
+                'stock_price' => 85000,
                 'created_at' => '2024-12-22 17:26:27',
-                'updated_at' => '2024-12-22 17:26:27',
+                'updated_at' => '2024-12-28 19:22:13',
             ),
             1 => 
             array (
@@ -38,6 +40,8 @@ class ProductsTableSeeder extends Seeder
                 'buyer_name' => 'Yamaha Motors',
                 'buyer_address' => 'Japan',
                 'buyer_bin_no' => '13778500-22540',
+                'stock_unit' => 0,
+                'stock_price' => 0,
                 'created_at' => '2024-12-22 17:32:33',
                 'updated_at' => '2024-12-22 17:32:33',
             ),

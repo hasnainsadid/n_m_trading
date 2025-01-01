@@ -15,12 +15,17 @@ return new class extends Migration
             $table->id();
             $table->foreignId('product_id');
             $table->string('date');
+            $table->string('obi_unit')->nullable();
+            $table->string('obi_price')->nullable();
             $table->string('pm_bill_of_entry')->nullable();
             $table->string('pm_bill_of_entry_date')->nullable();
             $table->string('pm_unit')->nullable();
             $table->string('pm_price_without_vat')->nullable();
             $table->string('pm_supplementary_duty')->nullable();
             $table->string('pm_vat')->nullable();
+            $table->string('cbi_unit')->nullable();
+            $table->string('cbi_price')->nullable();
+            $table->text('note')->nullable();
             $table->timestamps();
         });
     }
